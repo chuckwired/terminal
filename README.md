@@ -23,11 +23,11 @@ What madman doesn't install [brew](https://brew.sh) to manage their package!?
 ```
 
 # Setup tmux
-tmux is fantastic if you need to manage multiple windows and multiple settings with minimal fuss.
+tmux is fantastic if you need to manage multiple windows and multiple settings with minimal fuss. I've forked from [tony](http://tony.github.io/tmux-config/) but added automatic save and restore on system restart 😉.
 
 ```
-# cd /path/to/git/clone/terminal
-cp tmux.conf ~/.tmux.conf
+git clone https://github.com/chuckwired/tmux-config.git ~/.tmux
+ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
 ```
 
 # Personal iTerm2 profile
