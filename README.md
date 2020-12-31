@@ -28,6 +28,8 @@ tmux is fantastic if you need to manage multiple windows and multiple settings w
 ```
 git clone https://github.com/chuckwired/tmux-config.git ~/.tmux
 ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source ~/.tmux.conf
 ```
 
 # Personal iTerm2 profile
