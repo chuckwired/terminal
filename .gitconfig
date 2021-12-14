@@ -1,0 +1,39 @@
+[push]
+        default = current
+[alias]
+    poosh = push --force-with-lease
+    b    = branch
+    co   = checkout
+    c    = commit
+    cam  = commit -am
+    l    = log --pretty=format:'%h : %an, %ar : %s' --graph
+    s    = status
+    bs   = !"git branch ; git status"
+    pick = cherry-pick
+    ull  = !"git fetch origin -v; git fetch upstream -v; git merge upstream/${1:-master}"
+    ci   = commit
+    rb   = rebase
+    subup = submodule update --init  --recursive
+    getpr = fetch --tags --progress upstream +refs/pull/*:refs/remotes/origin/pr/*
+    unadd = reset HEAD
+    # list branches sorted by last modified
+    bb = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+    # list aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+[color]
+    ui = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	email = chuck@chuckwired.com
+    name = Chuck Rice
+[core]
+    pager = less -R
+[pager]
+	branch = false
+[pull]
+	ff = only
