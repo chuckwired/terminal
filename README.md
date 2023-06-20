@@ -69,7 +69,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ```
 
-## Updating plugins, configs, and tools
+# Updating plugins, configs, and tools
 If moving to a new Mac, or haven't done it for a while, it's worth routinely updating upstreams for plugs and configs.
 
 ```
