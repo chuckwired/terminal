@@ -68,3 +68,20 @@ ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ```
+
+## Updating plugins, configs, and tools
+If moving to a new Mac, or haven't done it for a while, it's worth routinely updating upstreams for plugs and configs.
+
+```
+# Update awesome vim
+cd ~/.vim_runtime && git fetch && git pull && sh ~/.vim_runtime/install_awesome_vimrc.sh && popd
+
+# Update vim plugins
+cd ~/.vim/plugged; for i in $(ls); do cd $i && git fetch && git pull && cd ..; done
+
+# Reload vim config, and zsh config
+source ~/.vimrc; source ~/.zshrc
+
+# Finally, update via brew
+brew update
+```
