@@ -32,6 +32,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ```
 
+Don't forget to trigger plugins installation:
+
+> 1. Open up tmux: `tmux new -s killme`
+> 2. Then press prefix + I (capital i, as in Install) to fetch the plugin.
+
+(Session name is an inside joke, not a cry for help..!)
+
 # Finally, usual packages
 Just install the usual things that you'll probably need.
 
